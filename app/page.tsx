@@ -141,7 +141,7 @@ export default function Home() {
                 e.preventDefault();
                 setIsLogin(true);
               }}
-              className="bg-green-700 text-sm px-7 py-2 rounded-sm font-semibold box-border transition hover:brightness-50 ms-6"
+              className="bg-green-700 text-sm px-7 py-2 rounded-sm font-semibold box-border transition hover:brightness-50 ms-6 text-white dark:text-white"
             >
               Log in
             </button>
@@ -525,7 +525,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Instant Messaging
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   ChitChat is optimized for speed, ensuring that your
                   conversations keep up with your thoughts.
                 </p>
@@ -543,7 +543,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Intuitive User Interface
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   Navigate with ease through ChitChat’s straightforward and
                   attractive interface, designed for clarity and simplicity.
                 </p>
@@ -561,7 +561,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Dedicated Support Team
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   ChitChat's customer support is just a message away, providing
                   you with prompt and helpful service whenever you need it.
                 </p>
@@ -579,7 +579,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Customizable Themes
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   Tailor your chat experience with customizable themes,
                   including a choice between a soothing dark mode and a bright
                   light mode.
@@ -598,7 +598,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Real-time Synchronization
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   Seamlessly continue conversations across different devices
                   with real-time synchronization, so you never miss a message.
                 </p>
@@ -616,7 +616,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Optimized for Performance
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   ChitChat doesn't just run fast; it’s also light on resources,
                   preserving your device’s battery and data usage.
                 </p>
@@ -634,7 +634,7 @@ export default function Home() {
                 <h1 className="text-md font-bold text-green-400">
                   Consistent Updates
                 </h1>
-                <p className="text-sm pe-2">
+                <p className="text-sm pe-2 text-white dark:text-white">
                   Benefit from an app that grows and improves with regular
                   updates, new features, and enhancements tailored to user
                   feedback.
