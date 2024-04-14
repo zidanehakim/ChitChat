@@ -1,0 +1,4 @@
+{
+  "extends": "next/core-web-vitals",
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true }
+}

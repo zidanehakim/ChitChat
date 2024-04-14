@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* DARK */
+.darkscroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb(15, 16, 34);
+}
+
+.darkscroll::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: rgb(15, 16, 34)
+}
+
+.darkscroll::-webkit-scrollbar-thumb
+{
+	background-color: rgb(5, 5, 19);
+}
+
+/* LIGHT */
+.lightscroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(97, 97, 97, 0.3);
+	background-color: rgb(255, 255, 255);
+}
+
+.lightscroll::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: rgb(255, 255, 255);
+}
+
+.lightscroll::-webkit-scrollbar-thumb
+{
+	background-color: rgb(209, 209, 209);
+}
+
+.audio-recorder{
+  box-shadow:0 0 0 0 !important;
+}
+
+.error{
+  font-size: .7em;
+  color:rgb(248, 115, 115);
+  font-weight:500
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid rgba(255, 255, 255, 0);
+  -webkit-text-fill-color: rgb(10, 9, 9);
+  -webkit-box-shadow: 0 0 0px 1000px #f3ed4900 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
