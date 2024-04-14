@@ -32,15 +32,16 @@ export const Menu = () => {
   );
 
   useEffect(() => {
-    setUnread(
-      contactsUser.reduce((count, person) => {
-        console.log(user);
-        const unreadChats = person.chats.filter(
-          (chat) => chat.read_status === false && chat.recipient_id === user.id
-        ).length;
-        return count + unreadChats;
-      }, 0)
-    );
+    const amount = contactsUser.reduce((count, person) => {
+      console.log(user);
+      const unreadChats = person.chats.filter(
+        (chat) => chat.read_status === false && chat.recipient_id === user.id
+      ).length;
+      return count + unreadChats;
+    }, 0);
+    setUnread(amount);
+    document.title =
+      amount > 0 ? `ChitChat - New essages ${amount}` : `ChitChat - Chat now!`;
   }, [contactsUser]);
 
   console.log("unread", unread);

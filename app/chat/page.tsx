@@ -20,6 +20,8 @@ import { HashLoader } from "react-spinners";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Head from "next/head";
+
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["devanagari"],
@@ -45,23 +47,29 @@ export default function Dashboard() {
 
         if (!session) router.replace("/");
         else {
-          fetch(`http://localhost:3000/api/updatestatus/${session?.user.id}`, {
-            method: "POST",
-            keepalive: true,
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify(true),
-          });
+          fetch(
+            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            {
+              method: "POST",
+              keepalive: true,
+              headers: { "Content-type": "application/json" },
+              body: JSON.stringify(true),
+            }
+          );
 
           getUserData();
         }
 
         const updateOffline = async () => {
-          fetch(`http://localhost:3000/api/updatestatus/${session?.user.id}`, {
-            method: "POST",
-            keepalive: true,
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify(false),
-          });
+          fetch(
+            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            {
+              method: "POST",
+              keepalive: true,
+              headers: { "Content-type": "application/json" },
+              body: JSON.stringify(false),
+            }
+          );
         };
         // Add event listener for beforeunload
         window.addEventListener("unload", updateOffline);
@@ -313,6 +321,14 @@ export default function Dashboard() {
   return !load ? (
     <main className={poppins.className} onClick={() => setContextIndex(-1)}>
       <>
+        <Head>
+          <title>My page title</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
+
         <ToastContainer
           position="bottom-right"
           autoClose={5000}
