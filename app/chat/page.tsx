@@ -47,8 +47,21 @@ export default function Dashboard() {
 
         if (!session) router.replace("/");
         else {
+          const { data, error } = await supabase
+            .from("users")
+            .select("*")
+            .eq("auth_id", session.user.id);
+
+          if (!data)
+            await supabase.from("users").upsert({
+              username: "",
+              email: user.email,
+              online_status: true,
+              auth_id: session.user.id,
+            });
+
           fetch(
-            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            `https://chitchat-three-rho.vercel.app/api/updatestatus/${session?.user.id}`,
             {
               method: "POST",
               keepalive: true,
@@ -62,7 +75,7 @@ export default function Dashboard() {
 
         const updateOffline = async () => {
           fetch(
-            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            `https://chitchat-three-rho.vercel.app/api/updatestatus/${session?.user.id}`,
             {
               method: "POST",
               keepalive: true,

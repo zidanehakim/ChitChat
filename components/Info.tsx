@@ -4,7 +4,7 @@ import supabase from "@/utils/supabase/server";
 import React, { useContext, useEffect, useState } from "react";
 import { user } from "../contexts/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faImage, faUpload } from "@fortawesome/free-solid-svg-icons";
+import { faImage, faUpload } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import ReactTextareaAutosize from "react-textarea-autosize";
 import { ErrorMessage, Field, FormikProvider, useFormik } from "formik";
