@@ -49,8 +49,7 @@ export default function Dashboard() {
         else {
           const { error } = await supabase.from("users").upsert(
             {
-              username: "",
-              email: user.email,
+              email: session.user.email,
               online_status: true,
               auth_id: session.user.id,
             },
