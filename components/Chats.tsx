@@ -99,11 +99,14 @@ export const Chats = ({
   useEffect(() => {
     const checkFile = async () => {
       try {
-        const response = await fetch(`https://chitchat-now.xyz/api/filecheck`, {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify(fileName),
-        });
+        const response = await fetch(
+          `https://www.chitchat-now.xyz/api/filecheck`,
+          {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(fileName),
+          }
+        );
 
         if (response.ok) {
           const fileData = await response.blob();

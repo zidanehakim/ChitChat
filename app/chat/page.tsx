@@ -60,7 +60,7 @@ export default function Dashboard() {
           if (error) throw error;
 
           fetch(
-            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            `https://www.chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
             {
               method: "POST",
               keepalive: true,
@@ -74,7 +74,7 @@ export default function Dashboard() {
 
         const updateOffline = async () => {
           fetch(
-            `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
+            `https://www.chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
             {
               method: "POST",
               keepalive: true,
