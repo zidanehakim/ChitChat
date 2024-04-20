@@ -115,14 +115,14 @@ export const Info = () => {
   }, []);
 
   const wallpaperChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    formik.setFieldValue("image", e.target.files![0]);
+    formik.setFieldValue("wallpaper", e.target.files![0]);
 
     const path = URL.createObjectURL(e.target.files![0]);
     setWallpaperShow(path);
   };
 
   const imageChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    formik.setFieldValue("wallpaper", e.target.files![0]);
+    formik.setFieldValue("image", e.target.files![0]);
 
     const path = URL.createObjectURL(e.target.files![0]);
     setImageShow(path);
