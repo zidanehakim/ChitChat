@@ -47,12 +47,16 @@ export default function Dashboard() {
 
         if (!session) router.replace("/");
         else {
-          await supabase.from("users").upsert({
-            username: "",
-            email: user.email,
-            online_status: true,
-            auth_id: session.user.id,
-          });
+          await supabase
+            .from("users")
+            .upsert({
+              username: "",
+              email: user.email,
+              online_status: true,
+              auth_id: session.user.id,
+            })
+            .eq("auth_id", session.user.id)
+            .single();
 
           fetch(
             `https://chitchat-now.xyz/api/updatestatus/${session?.user.id}`,
