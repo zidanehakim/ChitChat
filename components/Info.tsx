@@ -130,7 +130,7 @@ export const Info = () => {
 
   return (
     <FormikProvider value={formik}>
-      <div className="bg-black w-full h-full z-30 fixed opacity-70"></div>
+      <div className="bg-black w-full h-full z-50 fixed opacity-70"></div>
       <div className="flex w-full h-full justify-center items-center">
         <div className="w-fit h-fit z-30 flex justify-center items-center flex-col mb-24">
           <div className="h-fit w-fit mb-5 text-center">

@@ -137,7 +137,7 @@ export const Profile = () => {
 
   return (
     <>
-      <div className="bg-black w-full h-full z-30 fixed opacity-70"></div>
+      <div className="bg-black w-full h-full z-30 fixed opacity-70 text-white dark:text-white"></div>
       <div className="w-full h-full fixed z-30 flex justify-center">
         <div
           className="m-auto w-[35em] h-[20em] rounded-2xl flex relative shadow bg-blue-100"
@@ -179,6 +179,7 @@ export const Profile = () => {
                   icon={faEdit}
                   className="cursor-pointer hover:scale-105 transition absolute top-3 left-5 bg-gray-900 rounded-full px-2 py-2"
                   size="sm"
+                  color="white"
                 />
               </button>
             ) : (
@@ -187,6 +188,7 @@ export const Profile = () => {
                   icon={faCheck}
                   className="cursor-pointer hover:scale-105 transition absolute top-3 left-5 bg-gray-900 rounded-full px-2 py-2"
                   size="sm"
+                  color="white"
                 />
               </button>
             ))}
@@ -200,6 +202,7 @@ export const Profile = () => {
                       icon={faImage}
                       className="cursor-pointer hover:scale-105 bg-gray-900 absolute rounded-full px-2 py-2 ms-4"
                       size="xs"
+                      color="white"
                     />
                   </label>
 
@@ -289,6 +292,7 @@ export const Profile = () => {
               icon={faXmark}
               className="absolute right-4 top-4 cursor-pointer hover:brightness-50 transition w-4 h-4 px-1 py-1 rounded-full shadow-xl bg-slate-900"
               size="lg"
+              color="white"
             />
           </button>
         </div>
