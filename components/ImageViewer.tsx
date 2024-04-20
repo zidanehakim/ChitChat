@@ -12,8 +12,6 @@ export const ImageViewer = () => {
   const { image, setIsImage, imageIndex, setImageIndex } =
     useContext(AuthContext);
 
-  console.log(image);
-
   return (
     <>
       <div className="bg-black w-full h-full z-30 fixed opacity-70"></div>

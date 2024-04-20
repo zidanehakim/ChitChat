@@ -106,7 +106,6 @@ export const Info = () => {
 
         formik.setFieldValue("image", imageFile);
         formik.setFieldValue("wallpaper", wallpaperFile);
-        console.log(imageFile);
       } catch (error) {
         console.error("There was a problem fetching the image:", error);
       }

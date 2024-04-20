@@ -141,7 +141,6 @@ export default function Dashboard() {
   }, []);
 
   const getUserData = async () => {
-    console.log("brooooo", contactsUser);
     const session = (await supabase.auth.getSession()).data.session;
 
     const id = session?.user.id;

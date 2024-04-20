@@ -80,11 +80,9 @@ export const Contact = ({
   const audio = ["mp3", "ogg"];
 
   useEffect(() => {
-    console.log(chatboxID);
     const subscription = supabase
       .channel(chatboxID!)
       .on("broadcast", { event: "online" }, (payload) => {
-        console.log("online!!!");
         const newContactsUser: ListContacts[] = JSON.parse(
           JSON.stringify(contactsUser)
         );

@@ -16,7 +16,6 @@ export const Leftbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const { user, setIsProfile, setProfile } = useContext(AuthContext);
-  console.log(user.image);
 
   const [isAdd, setIsAdd] = useState(false);
 

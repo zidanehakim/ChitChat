@@ -16,14 +16,12 @@ export const PeopleAdd = () => {
   const [otherContacts, setOtherContacts] = useState([] as user[]);
 
   const searchHandler = async () => {
-    console.log("hi");
     try {
       const { data, error } = await supabase
         .from("users")
         .select("*")
         .or(`email.eq.${search},username.ilike.*${search}*`);
 
-      console.log(data);
       if (error) throw error;
 
       const newOtherContacts: user[] = data
@@ -36,7 +34,6 @@ export const PeopleAdd = () => {
           return { ...a, image: image.publicUrl };
         });
 
-      console.log(newOtherContacts);
       setOtherContacts(newOtherContacts);
     } catch (err) {
       console.error(err);

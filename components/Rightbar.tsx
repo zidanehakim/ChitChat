@@ -167,7 +167,6 @@ export const Rightbar = () => {
 
         if (insertError) throw insertError;
       } else {
-        console.log(newChat);
         const { error: insertError } = await supabase
           .from("chats")
           .insert(newChat);
@@ -224,7 +223,6 @@ export const Rightbar = () => {
   }, [index, contactsUser, text]);
 
   const deleteChats = async () => {
-    console.log("hellooooo");
     const newContactsUser: ListContacts[] = JSON.parse(
       JSON.stringify(contactsUser)
     );
@@ -274,7 +272,6 @@ export const Rightbar = () => {
   };
 
   const insertUpdateChats = async () => {
-    console.log("asdasd");
     const newContactsUser: ListContacts[] = JSON.parse(
       JSON.stringify(contactsUser)
     );

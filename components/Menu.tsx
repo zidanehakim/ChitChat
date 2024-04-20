@@ -23,7 +23,6 @@ export const Menu = () => {
 
   const [unread, setUnread] = useState(
     contactsUser.reduce((count, person) => {
-      console.log(user);
       const unreadChats = person.chats.filter(
         (chat) => chat.read_status === false && chat.recipient_id === user.id
       ).length;
@@ -33,7 +32,6 @@ export const Menu = () => {
 
   useEffect(() => {
     const amount = contactsUser.reduce((count, person) => {
-      console.log(user);
       const unreadChats = person.chats.filter(
         (chat) => chat.read_status === false && chat.recipient_id === user.id
       ).length;
@@ -43,8 +41,6 @@ export const Menu = () => {
     document.title =
       amount > 0 ? `ChitChat - New essages ${amount}` : `ChitChat - Chat now!`;
   }, [contactsUser]);
-
-  console.log("unread", unread);
 
   const logOutHandler = async () => {
     const id = toast.loading("Signing Out...");

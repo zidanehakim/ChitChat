@@ -133,8 +133,6 @@ export const Chats = ({
 
   const downloadAttachment = async () => {
     if (!once) {
-      console.log("Downloading..");
-
       const { data, error } = await supabase.storage
         .from("attachment")
         .download(chats.attachment!);
@@ -182,7 +180,6 @@ export const Chats = ({
           (a) => a.attachment && image.includes(a.attachment!.split(".")[2])
         );
         const foundImageIndex = imageChats?.findIndex((a) => a.id === chats.id);
-        console.log(imageChats, foundImageIndex);
 
         setImageIndex(foundImageIndex!);
         setImage(imageChats!);
@@ -274,7 +271,6 @@ export const Chats = ({
   };
 
   const onPlayPause = () => {
-    console.log(wavesurfer);
     wavesurfer && wavesurfer.playPause();
   };
 
