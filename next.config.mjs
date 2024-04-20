@@ -8,7 +8,7 @@ const nextConfig = {
           { key: "Access-Control-Allow-Credentials", value: "true" },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://www.chitchat-now.xyz",
+            value: "*",
           },
           {
             key: "Access-Control-Allow-Methods",
