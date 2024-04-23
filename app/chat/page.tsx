@@ -371,7 +371,7 @@ export default function Dashboard() {
             <MemoizedRightbar />
           </div>
           {!user?.username && (
-            <div className="w-[100vw] h-[100vh] z-100 fixed top-0">
+            <div className="w-[100vw] h-[100vh] z-50 fixed top-0">
               <Info />
             </div>
           )}
