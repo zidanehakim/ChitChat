@@ -135,7 +135,7 @@ export const Login = ({ setIsLogin }: LoginProps) => {
       initial="hidden"
       animate="visible"
       variants={appearVariants}
-      className="fixed h-fit bg-[rgba(0,0,0,0.8)] z-30 flex flex-col justify-center items-center top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 shadow-xl"
+      className="fixed h-fit bg-[rgba(0,0,0,0.8)] z-50 flex flex-col justify-center items-center top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 shadow-xl"
     >
       <motion.div
         initial="hidden"

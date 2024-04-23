@@ -75,7 +75,7 @@ export const Contact = ({
 
   const date = lastMessage && new Date(lastMessage.created_at!);
 
-  const video = ["mp4", "wav"];
+  const video = ["mp4", "wav", "webm", "mkv", "avi"];
   const image = ["jpeg", "jpg", "png"];
   const audio = ["mp3", "ogg"];
 
